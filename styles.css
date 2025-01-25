@@ -236,3 +236,42 @@ footer {
     background: var(--neon-blue);
     border-radius: 5px;
 }
+/* Your existing CSS code here */
+
+/* ... (keep all the existing styles) ... */
+
+/* New styles for techniques page */
+.techniques-content {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    margin: 2rem;
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.techniques-content section {
+    margin-bottom: 3rem;  /* Added space between technique sections */
+}
+
+.techniques-content h2 {
+    color: var(--neon-blue);
+    margin-bottom: 1.5rem;
+}
+
+.techniques-content h3 {
+    color: var(--neon-pink);
+    margin-top: 2rem;  /* Increased top margin */
+    margin-bottom: 1rem;
+}
+
+.techniques-content p {
+    margin-bottom: 1rem;
+}
+
+.techniques-content section > p {
+    margin-bottom: 1rem;
+}
+
+/* End of new styles */
+
+/* Keep the rest of your existing styles */
