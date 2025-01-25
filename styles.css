@@ -1,6 +1,6 @@
 /* Basic Styling */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Choose a font you like */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -9,25 +9,31 @@ body {
 }
 
 a {
-    color: #0077cc; /* Set the color for links */
-    text-decoration: none; /* Remove default underline */
+    color: #0077cc;
+    text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline; /* Add underline on hover */
+    text-decoration: underline;
 }
 
 /* Header Styling */
 header {
-    background-color: #003366; /* Dark blue background */
-    color: #fff;
-    padding: 1rem 0;
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to bottom right, #e9e9e9, #d5d5d5);
+    padding: 30px 0;
     text-align: center;
+    color: #222;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+h1 {
+    font-family: "Lora", serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -38,75 +44,140 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 1rem;
+    margin: 0 15px;
 }
 
 nav a {
-    color: #fff;
-    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
-
+nav a:hover {
+    color: #005fa3;
+}
 /* Hero Section Styling */
 .hero {
-    background-image: url("images/hero-image.jpg"); /* Replace with a relevant background image */
+    background-image: url("images/hero-image.jpg");
     background-size: cover;
     background-position: center;
     color: #fff;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 80px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
 }
 
 .hero h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.8;
 }
 
 .learn-more {
     background-color: #0077cc;
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 15px 30px;
     border: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     cursor: pointer;
-    border-radius: 5px; /* Add rounded corners */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.learn-more:hover {
+    background-color: #005fa3;
+    transform: translateY(-2px);
+}
+
+.learn-more:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Benefits Section Styling */
 .benefits {
-    padding: 3rem 2rem;
+    padding: 60px 20px;
     text-align: center;
+}
+
+.benefits h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
 }
 
 .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
 .benefit {
     background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .benefit img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 1rem;
+    width: auto;
+    height: 90px;
+    margin-bottom: 20px;
+}
+
+.benefit h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.benefit p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
 }
 
 /* Quote Section Styling */
 .quote {
-    background-color: #f0f0f0;
-    padding: 2rem;
+    background-color: #f8f8f8;
+    padding: 40px 20px;
     text-align: center;
     font-style: italic;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.quote p {
+    font-size: 1.4rem;
+    color: #444;
+    line-height: 1.8;
+    margin: 0;
 }
 
 /* Footer Styling */
@@ -114,5 +185,113 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
+    padding: 20px 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #0077cc;
+}
+/* about page */
+.about, .content, .founder {
+    padding: 2rem;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.about h2, .content h3, .founder h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.about p, .content p, .founder p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.content ul {
+    list-style: disc;
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.content li {
+    margin-bottom: 1rem;
+}
+
+.content li strong {
+    color: #333;
+}
+
+/* Techniques Page Styles */
+
+.techniques {
+    padding: 2rem;
+}
+
+.techniques h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.technique-category {
+    margin-bottom: 3rem;
+}
+
+.technique-category h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+}
+
+.technique {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.technique h4 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    color: #0077cc;
+}
+
+.technique img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.technique p {
+    line-height: 1.7;
+    color: #555;
+}
+
+.technique ol {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+    color: #555;
+}
+
+.technique li {
+    margin-bottom: 0.8rem;
+}
+
+.technique strong {
+    color: #333;
 }
