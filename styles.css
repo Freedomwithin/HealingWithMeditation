@@ -1,180 +1,146 @@
-/* Modern CSS Reset */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* Ultra-Modern CSS for 2025 */
 
-/* Custom Properties */
 :root {
-  --primary-color: #0077cc;
-  --secondary-color: #005fa3;
-  --bg-color: #f8f8f8;
-  --text-color: #333;
-  --header-font: 'Lora', serif;
-  --body-font: 'Helvetica Neue', Arial, sans-serif;
+  --neon-blue: #00f3ff;
+  --neon-pink: #ff00ff;
+  --dark-bg: #0a0a0a;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --futuristic-font: 'Orbitron', sans-serif;
 }
 
-/* Modern Typography */
 body {
-  font-family: var(--body-font);
-  line-height: 1.6;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  background: var(--dark-bg);
+  color: #fff;
+  font-family: var(--futuristic-font);
 }
 
-/* Fluid Typography */
-h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
-h2 { font-size: clamp(1.5rem, 4vw, 2.5rem); }
-h3 { font-size: clamp(1.2rem, 3vw, 1.8rem); }
-
-/* Modern Link Styling */
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: var(--secondary-color);
-}
-
-/* Header with Glassmorphism */
+/* Futuristic Gaming UI Header */
 header {
-  background: rgba(245, 245, 245, 0.7);
+  background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  padding: 2rem;
+}
+
+/* Glassmorphism Navigation */
+nav {
+  background: var(--glass-bg);
   backdrop-filter: blur(10px);
-  padding: 2rem 0;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-h1 {
-  font-family: var(--header-font);
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-/* Modern Navigation */
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  list-style: none;
+  border-radius: 20px;
+  padding: 1rem;
 }
 
 nav a {
-  font-weight: 600;
-  position: relative;
+  color: var(--neon-blue);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background-color: var(--primary-color);
-  transform: scaleX(0);
+nav a:hover {
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+/* Bento Box Layout */
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.box {
+  background: var(--glass-bg);
+  border-radius: 15px;
+  padding: 1.5rem;
   transition: transform 0.3s ease;
 }
 
-nav a:hover::after {
-  transform: scaleX(1);
+.box:hover {
+  transform: translateY(-10px);
 }
 
-/* Hero Section with Modern Gradient */
-.hero {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
-  text-align: center;
-  padding: 5rem 2rem;
+/* Neumorphic Buttons */
+.btn {
+  background: var(--dark-bg);
+  color: var(--neon-blue);
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  box-shadow: 5px 5px 10px #050505, -5px -5px 10px #0f0f0f;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--neon-blue);
+  color: var(--dark-bg);
+  box-shadow: inset 5px 5px 10px #00b8c4, inset -5px -5px 10px #00ffff;
+}
+
+/* AI-Generated Graphics */
+.ai-graphic {
+  width: 100%;
+  height: 300px;
+  background-image: url('path-to-ai-generated-image.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
   position: relative;
+  overflow: hidden;
 }
 
-.hero::before {
-  content: "";
+.ai-graphic::after {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: 1;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(0, 243, 255, 0.5), rgba(255, 0, 255, 0.5));
+  mix-blend-mode: overlay;
 }
 
-.hero > * {
-  position: relative;
-  z-index: 2;
-}
-
-/* Modern Button Styling */
-.learn-more {
-  background-color: var(--primary-color);
-  color: #fff;
-  padding: 1rem 2rem;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
-  border-radius: 50px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 119, 204, 0.2);
-}
-
-.learn-more:hover {
-  background-color: var(--secondary-color);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 119, 204, 0.3);
-}
-
-/* Benefits Section with CSS Grid */
-.benefits-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 4rem 2rem;
-}
-
-.benefit {
-  background-color: #fff;
+/* Visible Borders */
+.section {
+  border: 2px solid var(--neon-blue);
+  border-radius: 20px;
   padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  margin-bottom: 2rem;
 }
 
-.benefit:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+/* Animated Typography */
+@keyframes glitch {
+  0% { transform: translate(0) }
+  20% { transform: translate(-5px, 5px) }
+  40% { transform: translate(-5px, -5px) }
+  60% { transform: translate(5px, 5px) }
+  80% { transform: translate(5px, -5px) }
+  100% { transform: translate(0) }
 }
 
-/* Footer with Modern Gradient */
+h1, h2, h3 {
+  animation: glitch 5s infinite;
+}
+
+/* Scroll-Triggered Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Maximalist Footer */
 footer {
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
-  color: #fff;
+  background: linear-gradient(to right, var(--neon-blue), var(--neon-pink));
+  padding: 3rem;
   text-align: center;
-  padding: 2rem 0;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .benefits-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #1a1a1a;
-    --text-color: #f0f0f0;
-  }
-  
-  .benefit {
-    background-color: #2a2a2a;
-  }
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
 }
