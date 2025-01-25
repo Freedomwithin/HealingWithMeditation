@@ -24,11 +24,12 @@ body {
     overflow-x: hidden;
 }
 
+
 /* Header Styling */
 header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-height: 30vh;
     text-align: center;
@@ -47,7 +48,45 @@ header h1 {
     position: relative;
     z-index: 2;
     text-shadow: var(--subtle-shadow);
-    animation: subtle-float 4s ease-in-out infinite;
+    margin-bottom: 1rem;
+}
+
+/* Navigation Styling */
+nav {
+    width: 100%;
+    margin-top: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 1rem 0;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--neon-blue);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
 }
 
 /* Navigation Styling */
