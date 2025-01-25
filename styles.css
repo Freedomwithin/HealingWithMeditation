@@ -234,3 +234,20 @@ footer {
 .techniques-content section > p {
     margin-bottom: 1rem;
 }
+#expandedContent {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    margin-top: 2rem;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: left;
+}
+
+#expandedContent h3 {
+    color: var(--neon-blue);
+    margin-bottom: 1rem;
+}
+
+#expandedContent p {
+    margin-bottom: 1rem;
+}
