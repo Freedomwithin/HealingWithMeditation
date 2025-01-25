@@ -12,32 +12,54 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li> <li><a href="techniques.html">Techniques</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="techniques.html">Techniques</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero ai-graphic">
             <h2>Discover Inner Peace Through Meditation</h2>
             <p>Embark on a journey of self-discovery and healing with the transformative power of meditation. Our website provides resources, techniques, and guidance to help you cultivate a calmer mind, reduce stress, and enhance your overall well-being.</p>
-            <button class="learn-more">Learn More</button>
+            <button class="btn learn-more">Learn More</button>
         </section>
 
-        <section class="benefits">
+        <section class="benefits section">
             <h2>Benefits of Meditation</h2>
-            <div class="benefits-grid">
-                <div class="benefit">
-                    <img src="images/stress-reduction.jpg" alt="Icon for stress reduction">
+            <div class="content">
+                <div class="box fade-in">
                     <h3>Stress Reduction</h3>
                     <p>Meditation helps calm the nervous system, reducing the impact of daily stressors.</p>
                 </div>
-                <div class="benefit">
-                    <img src="images/focus-icon.jpg" alt="Icon for improved focus">
+                <div class="box fade-in">
                     <h3>Improved Focus</h3>
                     <p>Regular practice enhances concentration and mental clarity.</p>
                 </div>
-                <div class="benefit">
-                    <img src="images/self-awareness.jpg" alt="Icon for self-awareness">
+                <div class="box fade-in">
                     <h3>Enhanced Self-Awareness</h3>
+                    <p>Meditation deepens your understanding of yourself and your thoughts.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Healing with Meditation. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple script to trigger fade-in animation
+        const fadeElems = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+        fadeElems.forEach(elem => observer.observe(elem));
+    </script>
+</body>
+</html>
