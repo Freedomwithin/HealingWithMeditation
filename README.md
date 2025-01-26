@@ -19,18 +19,19 @@ Welcome to **Healing With Meditation**, a serene space dedicated to fostering mi
    ```bash
    git clone https://github.com/freedomwithin/HealingWithMeditation.git
 
-2.Open the index.html file in your browser or host it on a live server.
+2. Open the index.html file in your browser or host it on a live server.
+* Live server option
    ```bash
-   cd path/to/your/project
+   cd HealingWithMeditation
    python3 -m http.server
    ```
 
 3.Customize the site by editing the source code in the /assets and /content directories.
 
 ## Built With
-HTML5 & CSS3
-JavaScript for dynamic features
-GitHub Pages for deployment
+* HTML5 & CSS3
+* JavaScript for dynamic features
+* GitHub Pages for deployment
 ## Contributing
 Contributions are welcome! If you'd like to improve the site or add new features:
 
