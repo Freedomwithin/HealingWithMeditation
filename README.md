@@ -18,7 +18,12 @@ Welcome to **Healing With Meditation**, a serene space dedicated to fostering mi
 1. Clone this repository:
    ```bash
    git clone https://github.com/freedomwithin/HealingWithMeditation.git
+
 2.Open the index.html file in your browser or host it on a live server.
+   ```bash
+   cd path/to/your/project
+   python3 -m http.server
+   ```
 
 3.Customize the site by editing the source code in the /assets and /content directories.
 
